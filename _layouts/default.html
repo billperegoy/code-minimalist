@@ -34,29 +34,10 @@
 <section>
 	<h1>Tags</h1>
     <ul>
-        {% assign sitetags = "" %}
-        {% for post in site.posts %}
-          {% for tag in post.tags %}
-            {% assign sitetags = sitetags | append: " " | append: tag %}
-          {% endfor %}
-        {% endfor %}
-
-        {% assign sorted_tags = sitetags | split: ' ' | sort %}
-        {% assign unique_tag_str = "" %}
-        {% assign last_tag = "" %}
-
-        {% for tag in sorted_tags %}
-          {% if tag != last_tag %}
-            {% assign unique_tag_str = unique_tag_str | append: " " | append: tag %}
-          {% endif %}
-          {% assign last_tag = tag %}
-        {% endfor %}
-
-
-        {% assign unique_tags = unique_tag_str | split: " " %}
-        {% for tag in unique_tags %}
-          <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-        {% endfor %}
+      {% include get_unique_tags %}
+      {% for tag in unique_tags %}
+        <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
     </ul>
 </section>
 
