@@ -21,9 +21,8 @@
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Example 1</a></li>
-            <li><a href="#">Example 2</a></li>
-            <li><a href="#">Example 3</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Links</a></li>
         </ul>
     </nav>
     <a href="#" title="Ampersand Solutions homepage"><img src="/img/logo.gif" alt="Ampersand Solutions" /></a></header>
@@ -51,16 +50,13 @@
 </article>
 
 <section>
-	<h1>Categories</h1>
+	<h1>Tags</h1>
     <ul>
-        <li><a href="#">example 1 </a></li>
-        <li><a href="#">example 2 </a></li>
-        <li><a href="#">example 3 </a></li>
-        <li><a href="#">example 4 </a></li>
-        <li><a href="#">example 5 </a></li>
-        <li><a href="#">example 6 </a></li>
-        <li><a href="#">example 7 </a></li>
-        <li><a href="#">example 8 </a></li>
+        {% for post in site.posts %}
+        {% for tag in post.tags %}
+        <li><a href="#">{{ tag }}</a></li>
+        {% endfor %}
+        {% endfor %}
     </ul>
 </section>
 
