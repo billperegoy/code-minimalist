@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog_entry
 title: Post 3
 author: The Sheep 
 tags: 
