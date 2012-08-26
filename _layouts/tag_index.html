@@ -1,21 +1,64 @@
----
-layout: default
----
-<h2 class="post_title">{.{page.title}}</h2>
-<ul>
-  {.% for post in site.posts %}
-  {.% for tag in post.tags %}
-  {.% if tag == page.tag %}
-  <li class="archive_list">
-    <time style="color:#666;font-size:11px;" datetime='{.{post.date | date: "%Y-%m-%d"}}'>{.{post.date | date: "%m/%d/%y"}}</time> <a class="archive_list_article_link" href='{.{post.url}}'>{.{post.title}}</a>
-    <p class="summary">{.{post.summary}}
-    <ul class="tag_list">
-      {.% for tag in post.tags %}
-      <li class="inline archive_list"><a class="tag_list_link" href="/tag/{.{ tag }}">{.{ tag }}</a></li>
-      {.% endfor %}
-    </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> {% if page.title %} {{ page.title }} | {% endif %} Code Minimalist </title>
+
+<!-- The below script Makes IE understand the new html5 tags are there and applies our CSS to it -->
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+<header>
+    <hgroup>
+        <h1>Code Minimalist</h1>
+        <h2>Simple Code for a Complex World</h2>
+    </hgroup>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/links">Links</a></li>
+        </ul>
+    </nav>
+    <a href="#" title="Ampersand Solutions homepage"><img src="/img/logo.gif" alt="Ampersand Solutions" /></a></header>
+
+<article>
+<ul class="entries">
+  {% for post in site.posts %}
+  {% for tag in post.tags %}
+  {% if tag == page.tag %}
+ 
+  <li>
+      <h1>{{ post.title }}</h1>
+      <p>Author: {{ post.author }}</p>
+      <p>{{ post.content }}</p>
+      <p>Tags: {{ post.tags }}</p>
   </li>
-  {.% endif %}
-  {.% endfor %}
-  {.% endfor %}
+ 
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
 </ul>
+</article>
+
+<section>
+	<h1>Tags</h1>
+    <ul>
+        {% for post in site.posts %}
+        {% for tag in post.tags %}
+        <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+        {% endfor %}
+    </ul>
+</section>
+
+<footer>
+	<p>&copy; 2012 Code Minimalist - <a href="#">Sitemap</a> | <a href="#">Privacy policy</a> almost <a href="http://validator.w3.org/check?uri=http://www.webdezign.co.uk/blog/html5-examples/2col/">valid HTML5</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://www.webdezign.co.uk/blog/html5-examples/2col/">valid <abbr title="Cascading Style Sheet">CSS</abbr>3</a> design by <a href="http://www.webdezign.co.uk" title="web design london">Webdezign</a></p>
+</footer>
+</body>
+</html>

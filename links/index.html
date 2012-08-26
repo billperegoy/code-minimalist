@@ -1,0 +1,23 @@
+---
+layout: default
+title: about
+links:
+  - title: foo
+    url: http://www.foo.com
+  - title: goo
+    url: http://www.goo.com
+---
+This is the links page.
+
+<ul class="entries">
+
+  {% for link in page.links %}
+
+  <li>
+      <a href="{{ link.url }}">{{ link.title }}</a>
+  </li>
+
+  {% endfor %}
+</ul>
+
+
