@@ -37,6 +37,17 @@
     <p>Sed ut eros enim, gravida tristique mauris. Proin pellentesque, turpis vel placerat mollis, nulla leo iaculis mauris, quis dictum metus augue ac libero. Aenean scelerisque tellus eget magna vulputate nec fringilla urna imperdiet. Cras fringilla lorem vitae lectus vestibulum in tincidunt nulla pharetra. Phasellus et magna arcu, vel sagittis diam. Nulla eget turpis a nibh ornare accumsan. Praesent porta ultricies ligula nec pharetra. Nulla facilisi. Nunc blandit velit vel tellus lobortis dignissim. Pellentesque ornare fringilla sapien a sollicitudin. Praesent urna massa, cursus eu euismod eu, ornare eu dui. Sed pulvinar porttitor mi, iaculis aliquam risus mollis vel.</p>
     <h3>Donec mattis</h3>
     <p>Etiam porttitor libero ut dui adipiscing nec ullamcorper lectus egestas. Nullam massa lorem, posuere et interdum nec, tempor et erat. Etiam sagittis tellus non urna feugiat sed scelerisque quam suscipit. Etiam eget felis velit. Sed sagittis congue metus, quis pharetra est commodo id. Duis pulvinar, libero eget sollicitudin posuere, quam tellus rutrum justo, sit amet facilisis purus ipsum eu quam. Phasellus pharetra vehicula purus, sit amet auctor purus porta vitae. Maecenas accumsan blandit erat id tincidunt. Proin sit amet massa eu diam sagittis sodales ac et nunc. </p>
+<ul class="entries">
+  {% for post in site.posts %}
+ 
+  <li>
+      <p>{{ post.title }}</p>
+      <p>Author: {{ post.author }}</p>
+      <p>{{ post.content }}</p>
+  </li>
+ 
+  {% endfor %}
+</ul>
 </article>
 
 <section>
