@@ -9,19 +9,8 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <link rel="stylesheet" href="/css/style.css" />
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34363322-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+{% include google_analytics_header %}
+{% include sharethis_header %}
 <script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">stLight.options({publisher: "ur-b1fe6924-ee24-e281-a70-9126d6c57df5"}); </script>
@@ -48,40 +37,18 @@
 </article>
 
 <section>
-<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="http://code-minimalist.us2.list-manage.com/subscribe/post?u=f46723e821077ba851e19a61a&amp;id=11f08d144d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<h1>Subscribe</h1>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  </label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->
+{% include mailchimp_signup %}
 <br/>
 <br/>
 <br/>
-	<h1>Tags</h1>
-    <ul>
-      {% include get_unique_tags %}
-      {% for tag in unique_tags %}
-        <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
+{% include tag_index %}
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-	<h1>RSS</h1>
-<a href="http://feeds.feedburner.com/CodeMinimalist" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon32x32.png" alt="" style="border:0"/></a><a href="http://feeds.feedburner.com/CodeMinimalist" title="Subscribe to my feed" rel="alternate" type="application/rss+xml">Subscribe in a reader</a>
+{% include rss_sidebar %}
 </section>
 
 <footer>

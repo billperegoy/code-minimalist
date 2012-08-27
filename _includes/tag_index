@@ -1,0 +1,8 @@
+ <h1>Tags</h1>
+ <ul>
+  {% include get_unique_tags %}
+  {% for tag in unique_tags %}
+    <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+
