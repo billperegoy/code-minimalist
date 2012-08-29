@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family:Helvetica, Arial, sans-serif;
 	font-size:1.5em;
 	letter-spacing:-0.06em;
-	text-transform:uppercase;
+	//text-transform:uppercase;
 	font-weight:normal;
 }
 
@@ -99,11 +99,11 @@ section {
 }
 
 section h1, section h2, section h3, section h4, section h5, section h6 {
-	background:transparent url(sprites.png) no-repeat 0px -80px;
-	color:#fff;
+	//background:transparent url(sprites.png) no-repeat 0px -80px;
+	//color:#fff;
 	padding:9px 10px 10px 10px;
 	margin:13px -10px;	
-	text-shadow:0 1px 0 #403232;
+	//text-shadow:0 1px 0 #403232;
 }
 
 section ul {
@@ -136,12 +136,13 @@ article {
 	text-align:left;
 }
 
-article h1 {
-	background:transparent url(sprites.png) no-repeat 0px 0px;
-	color:#fff;
+article li a:link, article li a:visited {
+//article h1 {
+	//background:transparent url(sprites.png) no-repeat 0px 0px;
+	//color:#fff;
 	padding:7px 10px 12px 30px;
 	margin-left:-30px;
-	text-shadow:0 1px 0 #403232;
+	//text-shadow:0 1px 0 #403232;
 }
 
 article h2, article h3, article h4, article h5, article h6  {
@@ -152,6 +153,7 @@ article h2, article h3, article h4, article h5, article h6  {
 	text-shadow:0 1px 0 #913951;
 }
 
+/*
 article p:first-of-type {
 	font-family:Helvetica, Arial, serif;
 	text-transform:uppercase;
@@ -160,6 +162,7 @@ article p:first-of-type {
 	padding:10px 0px;
 	color:#c17086;
 }
+*/
 
 footer {
 	display:block;
