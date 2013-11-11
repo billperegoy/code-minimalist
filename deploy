@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-jekyll && rsync -avz --delete _site/ peregoy@www.billperegoy.com:/home/peregoy/code-minimalist.com
+jekyll build && rsync -avz --delete _site/ peregoy@lawrenceyoga.com:/home/peregoy/code-minimalist.com
