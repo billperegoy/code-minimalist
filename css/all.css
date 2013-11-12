@@ -350,12 +350,15 @@ section.container {
       margin-right: 0; }
     section.container header section.logo h1.headline {
       font-size: 72px;
-      line-height: 60px;
-      margin-bottom: 0px; }
+      line-height: 64px;
+      margin-bottom: 0px;
+      color: black; }
     section.container header section.logo h2.subhead {
+      font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
       font-size: 24px;
       padding-left: 8px;
-      line-height: 0px; }
+      line-height: 0px;
+      color: gray; }
   section.container header nav {
     display: block;
     float: left;
@@ -377,7 +380,8 @@ section.container {
     display: block;
     float: left;
     margin-right: 2.12766%;
-    width: 100%; }
+    width: 100%;
+    margin-top: -4px; }
     section.container header hr:last-child {
       margin-right: 0; }
   section.container aside {
@@ -392,7 +396,8 @@ section.container {
     float: left;
     margin-right: 2.12766%;
     width: 74.46809%;
-    margin-right: 0; }
+    margin-right: 0;
+    border-left: 1px dashed gray; }
     section.container section.main_content:last-child {
       margin-right: 0; }
   section.container footer {
@@ -402,3 +407,9 @@ section.container {
     width: 100%; }
     section.container footer:last-child {
       margin-right: 0; }
+
+ul.entries {
+  list-style-type: none; }
+  ul.entries section.post_header {
+    width: 280px;
+    margin-left: 0px; }
