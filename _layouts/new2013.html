@@ -1,0 +1,43 @@
+<html">
+  <head>
+    <title> {% if page.title %} {{ page.title }} | {% endif %} Code Minimalist </title>
+    <link rel="stylesheet" href="/css/all.css" />
+    {% include google_analytics_header %}
+    {% include sharethis_header %}
+  </head>
+
+  <body>
+    <section class="container">
+      <header>
+        <section class="logo">
+          <h1 class="headline">Code Minimalist</h1>
+          <h2 class="subhead">Simple Code for a Complex World</h2>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/links">Links</a></li>
+          </ul>
+        </nav>
+        <hr />
+      </header>
+  
+      <div>
+        <aside class="main_sidebar">
+          {% include mailchimp_signup %}
+          {% include tag_index %}
+          {% include rss_sidebar %}
+        </aside>
+
+        <section class="main_content">
+          {{ content }}
+        </section>
+      </div>
+
+      <footer>
+        <p>This is the footer</p>
+      </footer>
+    </section>
+  </body>
+</html>

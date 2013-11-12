@@ -2,3 +2,5 @@ _site
 *.swp
 *.save
 *.bak
+.sass-cache
+css/newstyle.css

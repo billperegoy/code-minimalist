@@ -1,0 +1,66 @@
+$sans_serif: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {
+  text-decoration: none;
+  color: lighten(black, 70);
+}
+a:active {text-decoration: none;}
+
+section.container {
+  @include outer-container;
+  font-family: $sans_serif;
+
+  header { 
+    section.logo {
+      @include span-columns(9); 
+      h1.headline {
+        font-size: 72px;
+        line-height: 60px;
+        margin-bottom: 0px;
+        }
+
+      h2.subhead {
+        font-size: 24px;
+        padding-left: 8px;
+        line-height: 0px;
+      }
+
+    }
+    nav {
+      @include span-columns(3); 
+      @include omega();
+      padding-top: 150px;
+
+      ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+
+        li {
+          display: inline;
+          padding-left: 20px;
+          font-size: 18px;
+        }
+      }
+    }
+    hr {
+      @include span-columns(12); 
+    }
+
+  }
+
+  aside { 
+    @include span-columns(3); 
+  }
+
+  section.main_content { 
+    @include span-columns(9); 
+    @include omega();
+  }
+
+  footer { 
+    @include span-columns(12); 
+  }
+}
