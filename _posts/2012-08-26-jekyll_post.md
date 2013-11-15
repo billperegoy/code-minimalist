@@ -1,6 +1,6 @@
 ---
 layout: blog_entry
-title: This is Jekyll 
+title: Jekyll Made this Blog Simple
 author: Bill Peregoy 
 tags: 
 - git 

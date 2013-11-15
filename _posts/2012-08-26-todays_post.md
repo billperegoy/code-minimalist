@@ -1,6 +1,6 @@
 ---
 layout: blog_entry
-title: Post 3
+title: github Keeps your Code Safe
 author: The Sheep 
 tags: 
 - git 

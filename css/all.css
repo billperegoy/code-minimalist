@@ -410,6 +410,19 @@ section.container {
 
 ul.entries {
   list-style-type: none; }
-  ul.entries section.post_header {
-    width: 280px;
+  ul.entries li h1.title a {
+    color: black; }
+  ul.entries li h1.title a:hover {
+    text-decoration: none;
+    color: #b3b3b3;
+    margin-top: 2px;
+    margin-bottom: 5px; }
+  ul.entries li section.post_header {
+    width: 185px;
     margin-left: 0px; }
+    ul.entries li section.post_header p.author {
+      margin-top: 2px;
+      margin-bottom: 5px; }
+    ul.entries li section.post_header p.date {
+      margin-top: 2px;
+      margin-bottom: -10px; }
