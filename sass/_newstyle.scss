@@ -1,0 +1,112 @@
+$sans_serif: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$serif: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+$vertical_bar_width: 1px;
+$vertical_bar_style: dashed;
+$vertical_bar_color: lighten(black, 50);
+
+$headline_color: black;
+$subhead_color: lighten($headline_color, 50);
+
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {
+  text-decoration: none;
+  color: lighten(black, 70);
+}
+a:active {text-decoration: none;}
+
+section.container {
+  @include outer-container;
+  font-family: $sans_serif;
+
+  header { 
+    section.logo {
+      @include span-columns(9); 
+      h1.headline {
+        font-size: 72px;
+        line-height: 64px;
+        margin-bottom: 0px;
+        color: $headline_color;  
+      }
+
+      h2.subhead {
+        font-family: $serif;
+        font-size: 24px;
+        padding-left: 8px;
+        line-height: 0px;
+        color: $subhead_color;  
+      }
+
+    }
+    nav {
+      @include span-columns(3); 
+      @include omega();
+      padding-top: 150px;
+
+      ul {
+        list-style-type:none;
+        margin:0;
+        padding:0;
+
+        li {
+          display: inline;
+          padding-left: 20px;
+          font-size: 18px;
+        }
+      }
+    }
+    hr {
+      @include span-columns(12); 
+      margin-top: -4px;
+    }
+
+  }
+
+  aside { 
+    @include span-columns(3); 
+  }
+
+  section.main_content { 
+    @include span-columns(9); 
+    @include omega();
+    border-left: $vertical_bar_width $vertical_bar_style $vertical_bar_color;
+  }
+
+  footer { 
+    @include span-columns(12); 
+  }
+}
+
+// Style blog posts
+ul.entries {
+  list-style-type:none;
+  li {
+    h1.title {
+      a {
+        color: black;
+      }
+      a:hover {
+        text-decoration: none;
+        color: lighten(black, 70);
+        margin-top: 2px;
+        margin-bottom: 5px;
+      }
+    }
+    section.post_header {
+      width: 185px;
+      margin-left: 0px;
+    
+      p.author {
+        margin-top: 2px;
+        margin-bottom: 5px;
+      }
+      p.date {
+        margin-top: 2px;
+        margin-bottom: -10px;
+      }
+   
+    }
+  }
+}

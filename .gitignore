@@ -3,4 +3,4 @@ _site
 *.save
 *.bak
 .sass-cache
-css/newstyle.css
+.DS_STORE
